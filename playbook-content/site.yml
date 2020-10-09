@@ -7,10 +7,10 @@
     status: "{{ ansible_local[stats_file_name]['status'] | default('0') }}"
   force_handlers: no
   pre_tasks:
-    - name: only collect the default minimum amount of facts
+    - name: update ansible facts
       setup:
         gather_subset:
-          - "!all"
+          - "all"
 
     - when: status == '0'
       block:
