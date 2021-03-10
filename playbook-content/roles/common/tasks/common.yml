@@ -1,8 +1,4 @@
 ---
 # Below is a code example
-- name: <r_common_t_common> test task
+- name: <r_common_t_common> print hello
   debug:
-
-- name: <r_common_t_common> test trigger handler
-  command: echo
-  notify: "({{ role_name }}) hello world"
